@@ -1,0 +1,87 @@
+.storySection {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 10rem;
+  position: relative;
+
+  .storySection__header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    .storySection__logo {
+      width: 40.8rem;
+      height: 11.6rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .storySection__title {
+      font-size: 8rem;
+      font-family: "LatoBold";
+      line-height: 9.6rem;
+      text-transform: uppercase;
+      padding-top: 3rem;
+      padding-bottom: 5rem;
+      color: $color-green3;
+      text-shadow: 0 2px 4px rgba($color-shadow, 0.3);
+    }
+  }
+  .storySection__bio {
+    width: 100%;
+    max-width: 51.3rem;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+
+    .storySection__description {
+      max-width: 51.3rem;
+      font-size: 1.5rem;
+      font-family: "PoppinsMedium";
+      line-height: 2.25rem;
+      color: $color-green3;
+      text-shadow: 0 1px 1px rgba($color-shadow, 0.3);
+      padding-bottom: 3rem;
+
+      .green__text {
+        font-family: "PoppinsBold";
+        color: $color-green-dark;
+      }
+      .red__text {
+        font-family: "PoppinsBold";
+        color: $color-red2;
+      }
+
+      &:nth-child(2n) {
+        width: 47.1rem;
+        align-self: flex-start;
+      }
+
+      &:nth-child(3n) {
+        width: 50.5rem;
+        align-self: flex-start;
+      }
+      &:nth-child(4n) {
+        width: 50.5rem;
+        align-self: flex-start;
+      }
+    }
+  }
+
+  .storySection__imageLeft {
+    position: absolute;
+    left: -35%;
+    bottom: 11%;
+  }
+  .storySection__imageRight {
+    position: absolute;
+    right: -35%;
+    bottom: 26%;
+  }
+}

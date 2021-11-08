@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: -apple-system, "LatoRegular", "PoppinsRegular", sans-serif;
+}
+
+body {
+  max-width: 1366px;
+  margin: 0 auto;
+  // face punctulete rotunde in bg
+  // background-image: radial-gradient(#ddd 1px, transparent 0),
+  //   radial-gradient(#ddd 1px, transparent 0);
+  // background-position: 0 0, 25px 25px;
+  // background-size: 50px 50px;
+  background-color: $color-body-bg;
+
+  @media (max-width: 620px) {
+    width: 100%;
+    padding: 0 4rem;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.message--wrapper {
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  &.success {
+    background-color: #c2ffc2;
+    color: #6db86d;
+  }
+  &.error {
+    background-color: #ffc2c2;
+    color: #c75d5d;
+  }
+}
