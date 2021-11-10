@@ -1,0 +1,46 @@
+{
+    "tourData": [
+        {
+            "mainImage": "/images/poster.png",
+            "profileImage": "/images/owner2.png",
+            "title": "LA TOURNEE DU BIONEMS UP TRUCK",
+            "subTitle": "Chaque jour une adresse différente pour retrouver la street food d’Anne-Sophie Bionems aux 4 coins de Paris et de la région !",
+            "program": [
+                {
+                    "date": "MARDI 12 OCTOBRE",
+                    "city": "PARIS",
+                    "orar": "11h45 - 14h00",
+                    "location": "Parking Despesse"
+                },
+
+                {
+                    "date": "MERCREDI 13 OCTOBRE",
+                    "city": "PARIS",
+                    "orar": "11h45 - 14h00",
+                    "location": "Parking Mercedes"
+                },
+
+                {
+                    "date": "JEUDI 14 OCTOBRE",
+                    "city": "PARIS",
+                    "orar": "11h45 - 14h00",
+                    "location": "Parking 2MS"
+                },
+
+                {
+                    "date": "VENDREDI 15 OCTOBRE",
+                    "city": "PARIS",
+                    "orar": "11h45 - 14h00",
+                    "location": "Parking Koesio (ex CPRO)"
+                },
+
+                {
+                    "date": "SAMEDI 16 OCTOBRE",
+                    "city": "PARIS",
+                    "orar": "11h45 - 14h00",
+                    "location": "Brasserie Pleine Lune"
+                }
+            ]
+        }
+    ]
+}

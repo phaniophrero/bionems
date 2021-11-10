@@ -1,0 +1,39 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-google-maps/api": "^2.5.0",
+    "embla-carousel-autoplay": "^6.0.0",
+    "embla-carousel-react": "^6.0.0",
+    "next": "12.0.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
+    "sass": "^1.43.4"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.3"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a269169b8a1132fa84d21a0e02a316119a04c1b6
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+<<<<<<< HEAD
+>>>>>>> b3dc5e6 (ceva de genul)
+=======
+>>>>>>> a269169b8a1132fa84d21a0e02a316119a04c1b6
+  }
+}

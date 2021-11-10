@@ -1,0 +1,79 @@
+.navbarTop {
+  width: 100%;
+  display: flex;
+  //   align-items: center;
+  padding: 3rem 0;
+
+  .navbarTop__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbarTop__item {
+      width: 100%;
+      display: flex;
+    }
+    .navbarTop__flag {
+      align-items: center;
+      font-size: 1.5rem;
+      font-family: "PoppinsMedium";
+      line-height: 2.25rem;
+      color: $color-primary-green;
+      margin-right: 1rem;
+      .flagWrapper {
+        height: 1.8rem;
+        margin-left: 1rem;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .logoWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      height: 5rem;
+      // margin: 3rem 0;
+      // margin-top: 4rem;
+      // margin-bottom: 5rem;
+      img {
+        height: 100%;
+        width: 17.5rem;
+      }
+    }
+    .navbarTop__contact {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .socialMedia {
+      font-size: 2.3rem;
+      color: $color-primary-green;
+      margin-right: 2rem;
+      &:hover {
+        color: $color-primary-red;
+      }
+    }
+    .socialMediaPhone {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-family: "PoppinsMedium";
+      line-height: 2.25rem;
+      margin-right: 0;
+      color: $color-primary-red;
+      text-shadow: 0 1px 1px rgba($color-shadow, 0.3);
+
+      .phoneIcon__wrapper {
+        font-size: 1.6rem;
+        transform: rotate(45deg);
+        margin-right: 1rem;
+        color: $color-primary-green;
+        &:hover {
+          color: $color-primary-red;
+        }
+      }
+    }
+  }
+}
