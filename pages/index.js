@@ -1,6 +1,9 @@
 import { useState } from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
 // import Head from "next/head";
 // import Image from "next/image";
 import NavbarTop from "../components/navbar/navbarTop";
@@ -14,6 +17,7 @@ import NewsletterSection from "../components/sections/newsletterSection";
 import Footer from "../components/footer/footer";
 
 export default function Home() {
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> a269169b8a1132fa84d21a0e02a316119a04c1b6
@@ -33,6 +37,8 @@ export default function Home(props) {
 >>>>>>> b3dc5e6 (ceva de genul)
 =======
 >>>>>>> a269169b8a1132fa84d21a0e02a316119a04c1b6
+=======
+>>>>>>> upstream/main
   const [showContent, setShowContent] = useState("FirstCategory");
 
   const showContentHandler = (category) => {
@@ -43,6 +49,9 @@ export default function Home(props) {
     <>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
       <NavbarTop />
       <NavbarHome />
       <SliderHero />
@@ -61,6 +70,7 @@ export default function Home(props) {
     </>
   );
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> a269169b8a1132fa84d21a0e02a316119a04c1b6
@@ -95,3 +105,5 @@ export async function getStaticProps() {
 >>>>>>> b3dc5e6 (ceva de genul)
 =======
 >>>>>>> a269169b8a1132fa84d21a0e02a316119a04c1b6
+=======
+>>>>>>> upstream/main

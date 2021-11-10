@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
 import "../styles/app.scss";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> a269169b8a1132fa84d21a0e02a316119a04c1b6
@@ -26,6 +30,8 @@ function MyApp({ Component, pageProps }) {
 >>>>>>> b3dc5e6 (ceva de genul)
 =======
 >>>>>>> a269169b8a1132fa84d21a0e02a316119a04c1b6
+=======
+>>>>>>> upstream/main
 }
 
 export default MyApp;
