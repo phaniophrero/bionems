@@ -1,40 +1,41 @@
-import { useState } from "react";
-// import Head from "next/head";
-// import Image from "next/image";
-import NavbarTop from "../components/navbar/navbarTop";
-import NavbarHome from "../components/navbar/navbarHome";
-import NavbarCategories from "../components/navbar/navbarCategories";
+import React, { useState } from 'react'
 import SliderHero from "../components/slider/sliderHero";
-import navbarData from "../data/navbarData";
-import StorySection from "../components/sections/storySection";
-import TourSection from "../components/sections/tourSection";
-import NewsletterSection from "../components/sections/newsletterSection";
-import Footer from "../components/footer/footer";
+import StorySection from "../components/home page/storySection";
+import TourSection from "../components/home page/tourSection";
+import NewsletterSection from "../components/home page/newsletterSection";
+import HomeFilteredProducts from "../components/home page/filtered products/home-filtered-products";
+import fs from 'fs/promises'
+import path from 'path'
 
-export default function Home() {
-  const [showContent, setShowContent] = useState("FirstCategory");
-
-  const showContentHandler = (category) => {
-    setShowContent(category);
-  };
-
+export default function Home(props) {
+  const { data, productsData, tourData } = props
+  
   return (
     <>
-      <NavbarTop />
-      <NavbarHome />
-      <SliderHero />
-      <NavbarCategories
-        showContent={showContent}
-        navbarData={navbarData}
-        showContentHandler={() => showContentHandler()}
-      />
-      {/* {navbarData.defaultCategory || showContent === "FirstCategory" && <Nems/>} */}
+    <SliderHero />
+      <HomeFilteredProducts data = { data } productsData = { productsData } />
 
       <StorySection />
-      {/* <TourSection /> */}
+      <TourSection tourData = {tourData} />
       <NewsletterSection />
-
-      <Footer />
     </>
-  );
+  )
+}
+
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), 'data', 'products-categorys-data.json')
+  const jsonData = await fs.readFile(filePath)
+  const data = JSON.parse(jsonData)
+
+  const tourPath = path.join(process.cwd(), 'data', 'tour-data.json')
+  const tourJsonData = await fs.readFile(tourPath)
+  const tourData = JSON.parse(tourJsonData)
+
+  return {
+    props: {
+      data: data.productsCategorysData,
+      productsData: data.products,
+      tourData: tourData.tourData
+    }
+  }
 }
