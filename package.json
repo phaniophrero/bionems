@@ -21,22 +21,10 @@
   "devDependencies": {
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.3"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a269169b8a1132fa84d21a0e02a316119a04c1b6
   },
   "browser": {
     "fs": false,
     "path": false,
     "os": false
-<<<<<<< HEAD
->>>>>>> b3dc5e6 (ceva de genul)
-=======
->>>>>>> a269169b8a1132fa84d21a0e02a316119a04c1b6
-=======
->>>>>>> upstream/main
   }
 }
