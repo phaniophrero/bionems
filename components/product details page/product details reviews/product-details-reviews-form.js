@@ -1,12 +1,13 @@
 import React from "react";
 import Input from "../../ui/input";
+import RatingStars from "./rating-stars";
 
 const ProductDetailsReviewsForm = () => {
   return (
     <form className="product-details-reviews-form">
       <div className="rating-stars">
         <p>Note Generale</p>
-        {/* //! un component pentru stele */}
+        <RatingStars />
       </div>
 
       <Input
