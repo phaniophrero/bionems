@@ -1,0 +1,25 @@
+.rating-stars-wrapper {
+    background-color: red;
+    width: 200px;
+    height: 40px;
+    display: flex;
+
+    .star-image {
+        background-color: white;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-content: center;;
+        cursor: pointer;
+
+        p {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

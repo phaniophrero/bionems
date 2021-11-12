@@ -146,10 +146,12 @@
 @keyframes dotAnimation {
   from {
     width: 4px;
+    top: calc(100% + 26px);
   }
 
   to {
-    width: 100%;
+    width: 140%;
     border-radius: 10px;
+    top: calc(100% + 26px);
   }
 }
