@@ -40,10 +40,10 @@ const ProductDetailsCarousel = (props) => {
           ))}
         </div>
 
-        <button class="embla__prev" onClick={scrollPrev}>
+        <button className="embla__prev" onClick={scrollPrev}>
           Prev
         </button>
-        <button class="embla__next" onClick={scrollNext}>
+        <button className="embla__next" onClick={scrollNext}>
           Next
         </button>
       </div>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+    <g data-name="Ellipse 1" style="stroke:#42c3a0;stroke-width:50px;fill:none">
+        <circle cx="200" cy="200" r="200" style="stroke:none"/>
+        <circle cx="200" cy="200" r="175" style="fill:none"/>
+    </g>
+</svg>
