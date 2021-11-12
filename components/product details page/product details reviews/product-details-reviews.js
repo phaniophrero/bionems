@@ -6,7 +6,7 @@ import ProductDetailsReviewsStatistics from './product-details-reviews-statistic
 const ProductDetailsReviews = () => {
     return (
         <div className='product-details-reviews'>
-            <h1>RECENZII</h1>
+            <h1 className='title'>RECENZII</h1>
             <ProductDetailsReviewsForm />
             <ProductDetailsReviewsStatistics />
             <ProductDetailsReviewsComments />

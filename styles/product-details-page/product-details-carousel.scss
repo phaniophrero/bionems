@@ -2,12 +2,14 @@
   max-width: 1366px;
   width: 100%;
   height: 394px;
+  margin: 100px 0;
 
   .embla__prev {
     position: absolute;
     width: 4rem;
     height: 4rem;
     top: 50%;
+    transform: translateY(-50%);
     left: 4%;
     border: none;
     outline: none;
@@ -21,6 +23,7 @@
     width: 4rem;
     height: 4rem;
     top: 50%;
+    transform: translateY(-50%);
     right: 4%;
     border: none;
     outline: none;
@@ -56,9 +59,5 @@
       width: 210px;
       height: 150px;
     }
-  }
-
-  .embla__viewport {
-    height: 100%;
   }
 }

@@ -1,0 +1,241 @@
+.register-page-background {
+  position: relative;
+  overflow: hidden;
+
+  .eclipse-left-container {
+    position: absolute;
+    left: 0;
+    bottom: -14%;
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+
+    .eclipse-left-image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .eclipse-top-container {
+    position: absolute;
+    top: -14%;
+    left: 28%;
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+
+    .eclipse-top-image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .eclipse-right-container {
+    position: absolute;
+    top: 20%;
+    right: 0%;
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+
+    .eclipse-right-image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.register-container {
+  max-width: 678.5px;
+  width: 100%;
+  height: 370.5px;
+  position: relative;
+
+  .ring-container {
+    position: absolute;
+    max-width: 200px;
+    width: 100%;
+    height: 200px;
+    top: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .ring-image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.register-page {
+  background: linear-gradient(119deg, #15223be1, #1d2e5de3);
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+
+  .register {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+
+    padding: 50px 80px;
+    border-radius: 7.5px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2.5px 10px 0 rgba(0, 78, 168, 0.2);
+    background-color: rgba(0, 0, 0, 0.76);
+
+    .image-container {
+      display: flex;
+
+      .image {
+        position: relative;
+        max-width: 293.3px;
+        width: 100%;
+        height: 270.5px;
+      }
+    }
+
+    .register-form {
+      color: white;
+      font-family: PoppinsRegular, sans-serif;
+
+      h1 {
+        font-size: 12.5px;
+        font-weight: normal;
+        color: #fff;
+      }
+
+      h2 {
+        font-size: 8px;
+        font-weight: normal;
+        color: #575757;
+        margin: 10px 0 15px 0;
+      }
+
+      .register-input--wrapper {
+        position: relative;
+        margin-bottom: 15px;
+        max-width: 175px;
+        width: 100%;
+
+        .image-container {
+          position: absolute;
+          top: 50%;
+          left: 8.5px;
+          transform: translateY(-50%);
+
+          .image {
+            position: relative;
+            width: 12px;
+            height: 12px;
+          }
+        }
+
+        input {
+          width: 100%;
+          height: 29px;
+          padding: 8px 30px;
+          border-radius: 5px;
+          box-shadow: 0 0.5px 5px 0 rgba(0, 78, 168, 0.2);
+          border: solid 0.5px #656565;
+          background: transparent;
+
+          font-family: PoppinsRegular, sans-serif;
+          font-size: 8px;
+          font-weight: normal;
+          color: #fff;
+
+          outline: none;
+        }
+
+        p {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-family: PoppinsRegular, sans-serif;
+          font-size: 8px;
+          font-weight: normal;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+
+      .terms {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 19px;
+
+        p {
+          font-family: PoppinsRegular, sans-serif;
+          font-size: 8px;
+          font-weight: normal;
+          color: #fff;
+        }
+
+        .checkbox {
+          width: 12px;
+          height: 12px;
+          border-radius: 2.5px;
+          border: 1px solid #255adb;
+          cursor: pointer;
+
+          &.checked {
+            background-image: url("../../public/assets/register-page/check.svg");
+            background-repeat: no-repeat;
+            background-size: 8px 5.8px;
+            background-position: center;
+            background-color: #255adb;
+          }
+        }
+      }
+
+      button {
+        max-width: 173.5px;
+        width: 100%;
+        height: 29px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: #255adb;
+        cursor: pointer;
+
+        font-family: PoppinsRegular, sans-serif;
+        font-size: 8px;
+        font-weight: normal;
+        color: #fff;
+      }
+
+      .go-to-sign-in {
+        display: flex;
+        margin-top: 10px;
+        gap: 4px;
+        align-items: center;
+
+        h4 {
+          font-family: PoppinsRegular, sans-serif;
+          font-size: 8px;
+          font-weight: normal;
+          color: #848484;
+        }
+
+        a {
+          font-family: PoppinsRegular, sans-serif;
+          font-size: 8px;
+          font-weight: normal;
+          color: #4275f4;
+        }
+      }
+    }
+  }
+}
