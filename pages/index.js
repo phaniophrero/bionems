@@ -6,12 +6,14 @@ import NewsletterSection from "../components/home page/newsletterSection";
 import HomeFilteredProducts from "../components/home page/filtered products/home-filtered-products";
 import fs from 'fs/promises'
 import path from 'path'
+import NavbarSections from '../components/navbar/navbar-sections';
 
 export default function Home(props) {
   const { data, productsData, tourData } = props
   
   return (
     <>
+    <NavbarSections />
     <SliderHero />
       <HomeFilteredProducts data = { data } productsData = { productsData } />
 

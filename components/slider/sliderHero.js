@@ -42,63 +42,48 @@ function SliderHero({ options = { loop: false } }) {
   }, [emblaApi, setScrollSnaps, onSelect]);
 
   return (
-    <>
+    <main className="hero-wrapper">
       <div className="embla" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((slide) => (
-            <div key={slide.id} className="embla__slide">
-              {/* <div className="slideContent"></div> */}
-              <div className="slide__text">
-                <div className="slideContent__left">
-                  <h1
-                    className={`slide__title ${
-                      slide.cNameTitle ? slide.cNameTitle : ""
-                    }`}
-                  >
-                    {slide.title}
-                    <span
-                      className={`slide__subtitle ${
-                        slide.cName ? slide.cName : ""
-                      }`}
-                    >
-                      {slide.subtitle}
-                    </span>
-                  </h1>
-                  <div className="slideMenu">
-                    <div className={slide.cNameMenuList}>
-                      <ul className="slideMenu__listItems">
-                        <li>{slide.menuTitleItem1}</li>
-                        <li>{slide.menuTitleItem2}</li>
-                        <li>{slide.menuTitleItem3}</li>
-                        {slide.id === "s2" && <li>{slide.menuTitleItem4}</li>}
-                      </ul>
-                    </div>
-                    {slide.id === "s1" && (
-                      <div className="slideMenu__list">
-                        <ul className="slideMenu__listItems">
-                          <li>Roulleau de printemps au poulet</li>
-                          <li>Roulleau de printemps au vegetarien</li>
-                        </ul>
-                      </div>
-                    )}
+          {slides.map((slide, index) => (
+            <div className="embla__slide" key={index}>
+              <div className="description">
+                <div className="main-title">
+                  <div className="title">
+                    <h1>{slide.title}</h1>
+                  </div>
+
+                  <div className="subtitle">
+                    <h2>{slide.title}</h2>
                   </div>
                 </div>
+
+                <ul className="ingredients">
+                  {slide.types.map((type, index) => (
+                    <li key = { index }>
+                      <div className="point" />
+                      <p key={index}>{type.name}</p>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <div className={`slideImage ${slide.cNameImage}`}>
-                <h2 className="slideImage__title">{slide.price}</h2>
-                <h3 className="slideImage__title2">Bon prix</h3>
-                <Image
-                  src={slide.image}
-                  width={425}
-                  height={323}
-                  alt="BioNems Menu Images Nems et Rouleaux"
-                />
+              <div className="image-container">
+                <div className="image">
+                  <Image src={slide.image} alt="image" layout="fill" />
+                </div>
+
+                <div className="price">
+                  <h1>{slide.price}</h1>
+                  <p>Bon Prix</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* //! DOTS */}
       <div className="sliderDots">
         {slides.map((dot, index) => (
           <DotButton
@@ -108,7 +93,7 @@ function SliderHero({ options = { loop: false } }) {
           />
         ))}
       </div>
-    </>
+    </main>
   );
 }
 

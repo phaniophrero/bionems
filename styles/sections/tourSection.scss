@@ -1,5 +1,11 @@
 .tour-section {
-    margin: 100px 0;
+  margin: 100px auto 40px auto;
+  box-shadow: 0 0 20px $shadow-gray;
+  border-radius: 20px;
+  width: 90%;
+  padding: 60px 40px;
+  background-color: white;
+
   .tour-wrapper {
     .images-top {
       position: relative;
@@ -35,6 +41,7 @@
 
       .title {
         margin-bottom: 28px;
+        text-align: center;
 
         h1 {
           text-shadow: 0 1px 2px rgba(77, 77, 77, 0.3);
@@ -68,6 +75,10 @@
           grid-template-columns: 1fr 1fr 1fr;
           column-gap: 200px;
 
+          &:last-child {
+            margin-bottom: 0;
+          }
+
           h1 {
             text-shadow: 0 1px 2px rgba(77, 77, 77, 0.3);
             font-size: 23px;
@@ -100,5 +111,108 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .tour-section {
+    margin: 100px auto 40px auto;
+    .tour-wrapper {
+      .images-top {
+        position: relative;
+        padding: 0 20px;
+
+        .poster-image {
+          height: 360px;
+          margin: 0 auto 150px auto;
+        }
+
+        .profile-image-container {
+          max-width: 200px;
+          height: 200px;
+          bottom: -24%;
+        }
+      }
+
+      .orar {
+        .title {
+          h1 {
+            font-size: 24px;
+          }
+        }
+
+        .subtitle {
+          h1 {
+            text-shadow: 0 1px 1px rgba(77, 77, 77, 0.3);
+            font-size: 14px;
+            font-weight: normal;
+            color: #ef706b;
+            line-height: 24px;
+          }
+        }
+
+        ul.program {
+          padding: 0 20px;
+
+          li {
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 100px;
+            align-items: center;
+
+            h1 {
+              text-shadow: 0 1px 2px rgba(77, 77, 77, 0.3);
+              font-size: 18px;
+              font-weight: 500;
+              color: #9dbfa5;
+              text-align: end;
+            }
+
+            h2 {
+              text-shadow: 0 1px 2px rgba(77, 77, 77, 0.3);
+              font-size: 18px;
+              font-weight: 500;
+              color: #ef706b;
+              text-align: center;
+            }
+
+            .location {
+              h4 {
+                font-size: 14px;
+                font-weight: 300;
+                color: #4d4d4d;
+                padding-bottom: 8px;
+              }
+
+              p {
+                font-size: 12px;
+                font-weight: 500;
+                color: #4d4d4d;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .tour-section {
+
+    .tour-wrapper {
+      .orar {
+        ul.program {
+          li {
+            column-gap: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .tour-section {
+    display: none;
   }
 }

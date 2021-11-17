@@ -1,7 +1,14 @@
 import React from "react";
+import { useDispatch, useSelector } from 'react-redux'
+import { getProductsCategoryAction } from "../../../redux/actions/getProductsCategoryAction";
+import { selectedProductsCategoryReducer } from "../../../redux/reducers/selectedProductsCategoryReducer";
 
 const FilterBar = (props) => {
   const { data, selectedCategoryHandler, selectedCategory } = props;
+
+  const dispatch = useDispatch()
+  const selectedProductsCategory = useSelector(state => state.selectedProductsCategory)
+  const { myCategory, myCategoryValue } = selectedProductsCategory 
 
   return (
     <header>
@@ -10,9 +17,9 @@ const FilterBar = (props) => {
           <li
             key={index}
             className={`filtered-item ${
-              selectedCategory === category.name ? "active" : ""
+              myCategory === category.name ? "active" : ""
             }`}
-            onClick={() => selectedCategoryHandler(category.name)}
+            onClick={() => dispatch(getProductsCategoryAction(category.name, category.id))}
           >
             {category.name}
           </li>

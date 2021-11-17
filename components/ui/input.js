@@ -31,7 +31,7 @@ const Input = (props) => {
   ) : (
     <div className={`textarea-ui ${wrapperCN && wrapperCN}`}>
       <label htmlFor={label}>{label}</label>
-      <textarea placeholder={placeholder} />
+      <textarea placeholder={placeholder} draggable={false} />
     </div>
   );
 };

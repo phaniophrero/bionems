@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55.973" height="28" viewBox="0 0 55.973 28">
+    <defs>
+        <filter id="a" x="0" y="0" width="21" height="28" filterUnits="userSpaceOnUse">
+            <feOffset dy="1"/>
+            <feGaussianBlur stdDeviation=".5" result="blur"/>
+            <feFlood flood-opacity=".098"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="Group 102">
+        <path data-name="Path 3" d="M2.058 88.273A2.057 2.057 0 0 0 0 90.331v13.885a2.058 2.058 0 0 0 2.058 2.058h7.1v-18z" transform="translate(28.5 -83.773)" style="fill:#41479b"/>
+        <path data-name="Rectangle 8" transform="translate(37.658 4.5)" style="fill:#f5f5f5" d="M0 0h9.158v18H0z"/>
+        <path data-name="Path 4" d="M348.433 88.273h-7.1v18h7.1a2.058 2.058 0 0 0 2.058-2.058V90.331a2.057 2.057 0 0 0-2.058-2.058z" transform="translate(-294.518 -83.773)" style="fill:#ff4b55"/>
+        <g style="filter:url(#a)">
+            <text data-name="FR" transform="translate(1.5 17.5)" style="fill:#2ca24a;font-size:15px;font-family:Poppins-Medium,Poppins;font-weight:500"><tspan x="0" y="0">FR</tspan></text>
+        </g>
+    </g>
+</svg>

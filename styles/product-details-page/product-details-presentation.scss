@@ -1,25 +1,146 @@
 .product-details-page {
   .product-details {
-      .product-details--presentation {
+    .product-details--presentation {
+      .top {
         display: grid;
-        grid-template-columns: 30% 70%;
-  
+        grid-template-columns: minmax(390px, 30%) minmax(auto, 70%);
+        padding: 40px 0;
+        column-gap: 10px;
+
         .image-container {
-          max-width: 400px;
           width: 100%;
           height: 285.7px;
-  
+          top: 0;
+
           .image {
             position: relative;
+            max-width: 400px;
             width: 100%;
             height: 100%;
           }
         }
-  
+
+        .details {
+          width: 100%;
+
+          .title {
+            h1 {
+              font-size: 30px;
+              font-weight: bold;
+              color: #168c34;
+              font-family: "PoppinsRegular", sans-serif;
+            }
+
+            h2 {
+              font-family: PoppinsRegular, sans-serif;
+              font-size: 14px;
+              color: #ad0002;
+            }
+          }
+
+          .ingredients {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 28px;
+
+            li {
+              p {
+                font-family: PoppinsRegular, sans-serif;
+                font-size: 14px;
+                color: #4d4d4d;
+              }
+            }
+          }
+        }
+      }
+
+      .bottom {
+        display: grid;
+        grid-template-columns: minmax(390px, 30%) minmax(auto, 70%);
+        column-gap: 10px;
+
+        .mini-comments {
+          max-height: 180px;
+          overflow-y: hidden;
+          position: relative;
+
+          .overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(
+              transparent 80%,
+              rgba(128, 128, 128, 0.329)
+            );
+          }
+        }
+
+        .description {
+          max-width: 500px;
+          width: 100%;
+          padding: 20px;
+          border-radius: 7.5px;
+          box-shadow: 0 0.5px 5px 0 rgba(24, 100, 37, 0.2);
+          background-color: #fff;
+
+          .title {
+            h1 {
+              font-size: 25px;
+              color: #19832b;
+              font-family: "PoppinsRegular", sans-serif;
+            }
+
+            div.line {
+              max-width: 50px;
+              width: 100%;
+              height: 2px;
+              background-color: #ad0002;
+            }
+          }
+
+          .text {
+            max-width: 531px;
+            width: 100%;
+            margin-top: 14px;
+
+            p {
+              font-family: PoppinsRegular, sans-serif;
+              font-size: 14px;
+              font-weight: normal;
+              color: #696969;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .product-details-page {
+    .product-details {
+      .product-details--presentation {
+        display: grid;
+
+        .image-container {
+          height: 285.7px;
+          width: 100%;
+
+          .image {
+            position: relative;
+            max-width: 400px;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
         .details {
           padding-top: 42px;
-          padding-left: 100px;
-  
+          padding-left: 20px;
+
           .title {
             h1 {
               font-size: 30px;
@@ -27,16 +148,16 @@
               color: #168c34;
               font-family: "PoppinsMedium", sans-serif;
             }
-  
+
             h2 {
               font-size: 18px;
               color: #ffa5c1;
               margin: 6px 0 44px 0;
               font-weight: 500;
-              font-family: 'PoppinsRegular', sans-serif;
+              font-family: "PoppinsRegular", sans-serif;
             }
           }
-  
+
           .description {
             .title {
               h1 {
@@ -45,7 +166,7 @@
                 margin: 95px 0 14px 0;
                 font-family: "PoppinsRegular", sans-serif;
               }
-  
+
               div.line {
                 max-width: 50px;
                 width: 100%;
@@ -54,12 +175,12 @@
                 margin-bottom: 20px;
               }
             }
-  
+
             .text {
               max-width: 531px;
               width: 100%;
               min-height: 235px;
-  
+
               p {
                 font-size: 18px;
                 color: #ffa5c1;
@@ -72,3 +193,43 @@
       }
     }
   }
+}
+
+@media (max-width: 620px) {
+  .product-details-page {
+    .product-details {
+      .product-details--presentation {
+
+        .top {
+          grid-template-columns: 1fr;
+          align-self: center;
+
+          .image-container {
+            display: flex;
+            justify-content: center;
+          }
+
+          .details {
+            width: 80%;
+            margin: auto;
+          }
+        }
+
+        .bottom {
+          grid-template-columns: 1fr;
+
+          .mini-comments {
+            grid-row: 2 / 3;
+          }
+
+          .description {
+            grid-row: 1 / 2;
+            width: 90%;
+            margin: auto;
+          }
+
+        }
+      }
+    }
+  }
+}

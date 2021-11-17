@@ -13,16 +13,10 @@ html {
 body {
   max-width: 1366px;
   margin: 0 auto;
-  // face punctulete rotunde in bg
-  // background-image: radial-gradient(#ddd 1px, transparent 0),
-  //   radial-gradient(#ddd 1px, transparent 0);
-  // background-position: 0 0, 25px 25px;
-  // background-size: 50px 50px;
   background-color: $color-body-bg;
 
   @media (max-width: 620px) {
     width: 100%;
-    padding: 0 4rem;
   }
 }
 
