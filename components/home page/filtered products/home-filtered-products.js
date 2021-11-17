@@ -9,6 +9,7 @@ import { getProductsCategoryAction } from "../../../redux/actions/getProductsCat
 const HomeFilteredProducts = (props) => {
   const { data, productsData } = props;
 
+
   const selectedProductsCategory = useSelector(
     (state) => state.selectedProductsCategory
   );
@@ -38,6 +39,20 @@ const HomeFilteredProducts = (props) => {
       ) : (
         <FilterContent filteredProducts={filteredProducts} />
       )}
+
+  const filteredProducts = productsData.filter(
+    (product) => product.category === selectedCategory
+  );
+
+  return (
+    <div className="home__filtered-products">
+      <FilterBar
+        data={data}
+        selectedCategoryHandler={selectedCategoryHandler}
+        selectedCategory={selectedCategory}
+      />
+      <FilterContent filteredProducts={filteredProducts} />
+
     </div>
   );
 };

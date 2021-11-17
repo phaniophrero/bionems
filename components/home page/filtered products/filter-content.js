@@ -8,12 +8,12 @@ const FilterContent = (props) => {
   return (
     <div className="home__filtered-products--content">
       {filteredProducts.map((product, index) => (
-        <Link href={`/${product.name.toLowerCase().replace(/\s+/g, '-')}`} key={index}>
+        <Link href={product.slug} key={index}>
           <a>
             <div className="card">
               <div className="image-container">
                 <div className="image">
-                  <Image src={product.image} alt='image' layout="fill" />
+                  <Image src={product.image} alt="image" layout="fill" />
                 </div>
               </div>
 
@@ -23,7 +23,7 @@ const FilterContent = (props) => {
 
               <ul className="ingredients">
                 {product.ingredients.map((ingredient, index) => (
-                  <li key={index}>{ingredient.name}</li>
+                  <li key={index}>{ingredient}</li>
                 ))}
               </ul>
 
