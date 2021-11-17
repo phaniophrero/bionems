@@ -69,7 +69,7 @@ function StorySection() {
         <div className="right-image-container">
           <div className="right-image">
             <Image
-              src="/assets/home-page/story-section/owner.png"
+              src="/assets/home-page/story-section/story-profile@3x.png"
               alt="image"
               layout="fill"
             />

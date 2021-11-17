@@ -9,18 +9,6 @@ function TourSection(props) {
     <section className="tour-section">
       {tourData.map((tour, index) => (
         <div className="tour-wrapper" key = { index }>
-          <div className="images-top">
-            <div className="poster-image">
-              <Image src={tour.mainImage} alt='poster' layout="fill" />
-            </div>
-
-            <div className="profile-image-container">
-              <div className="image">
-                <Image src={tour.profileImage} alt="" layout="fill" />
-              </div>
-            </div>
-          </div>
-
           <div className="orar">
             <div className="title">
               <h1>{tour.title}</h1>

@@ -4,6 +4,11 @@ import StorySection from "../components/home page/storySection";
 import TourSection from "../components/home page/tourSection";
 import NewsletterSection from "../components/home page/newsletterSection";
 import HomeFilteredProducts from "../components/home page/filtered products/home-filtered-products";
+
+import fs from 'fs/promises'
+import path from 'path'
+import NavbarSections from '../components/navbar/navbar-sections';
+
 // import { getAllCategories, getAllProducts } from "../helpers/api-util";
 import fs from "fs/promises";
 import path from "path";
@@ -13,8 +18,14 @@ export default function Home(props) {
 
   return (
     <>
+
+    <NavbarSections />
+    <SliderHero />
+      <HomeFilteredProducts data = { data } productsData = { productsData } />
+
       <SliderHero />
       <HomeFilteredProducts data={data} productsData={products} />
+
 
       <StorySection />
       <TourSection tourData={tourData} />

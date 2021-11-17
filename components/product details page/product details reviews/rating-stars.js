@@ -35,7 +35,8 @@ const DUMMY_STARS = [
 
 const RatingStars = () => {
   const [tracking, setTracking] = useState(0);
-  console.log(tracking);
+  const [value, setValue] = useState(0)
+  console.log(value)
 
   return (
     <div className="rating-stars-wrapper">
@@ -44,24 +45,16 @@ const RatingStars = () => {
           className="star-image"
           key={index}
           onMouseLeave={() => setTracking(0)}
+
         >
-          {star.value <= tracking ? (
-            <p
-              style={{ background: "yellow", width: "100%", height: "100%" }}
-              onMouseEnter={() => {
-                setTracking(star.value);
-              }}
-            >
-              f
-            </p>
+          {star.value <= tracking || star.value <= value ? (
+            <Image src='/assets/product-details/star-fill.svg' layout="fill"
+              onClick={() => setValue(star.value)}
+            />
           ) : (
-            <p
-              onMouseEnter={() => {
-                setTracking(star.value);
-              }}
-            >
-              e
-            </p>
+            <Image src='/assets/product-details/star-empty.svg' layout="fill"
+              onMouseEnter={() => setTracking(star.value)}
+            />
           )}
         </div>
       ))}

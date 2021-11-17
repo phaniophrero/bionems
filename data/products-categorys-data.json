@@ -1,23 +1,33 @@
 {
   "productsCategorysData": [
     {
-      "name": "Nems"
+      "name": "Nems",
+      "image": "/assets/categorys/nems@3x.png",
+      "id": 0
     },
 
     {
-      "name": "Bobuns"
+      "name": "Bobuns",
+      "image": "/assets/categorys/nems@3x.png",
+      "id": 1
     },
 
     {
-      "name": "Salades"
+      "name": "Salades",
+      "image": "/assets/categorys/nems@3x.png",
+      "id": 2
     },
 
     {
-      "name": "Desert"
+      "name": "Desert",
+      "image": "/assets/categorys/nems@3x.png",
+      "id": 3
     },
 
     {
-      "name": "Boissons"
+      "name": "Boissons",
+      "image": "/assets/categorys/nems@3x.png",
+      "id": 4
     }
   ],
 

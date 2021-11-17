@@ -1,21 +1,25 @@
 .product-details-carousel {
   max-width: 1366px;
   width: 100%;
-  height: 394px;
+  height: 340px;
   margin: 100px 0;
+  padding: 0 40px;
 
-  .embla__prev {
+  div.embla__prev {
     position: absolute;
     width: 4rem;
     height: 4rem;
     top: 50%;
     transform: translateY(-50%);
     left: 4%;
-    border: none;
-    outline: none;
-    background-color: white;
-    border-radius: 50%;
     cursor: pointer;
+    background-color: transparent;
+
+    .image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .embla__next {
@@ -25,11 +29,14 @@
     top: 50%;
     transform: translateY(-50%);
     right: 4%;
-    border: none;
-    outline: none;
-    background-color: white;
-    border-radius: 50%;
     cursor: pointer;
+    background-color: transparent;
+
+    .image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .embla-details {
@@ -58,6 +65,38 @@
       position: relative;
       width: 210px;
       height: 150px;
+    }
+
+    h1 {
+      font-family: PoppinsRegular, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: #a2c3aa;
+    }
+
+    p {
+      font-family: PoppinsRegular, sans-serif;
+      font-size: 14px;
+      color: #ffa5c1;
+      margin-top: 8px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .product-details-carousel {
+    .embla__slide-details {
+      flex: 0 0 100%;
+    }
+
+    div.embla__prev {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    div.embla__next {
+      width: 3rem;
+      height: 3rem;
     }
   }
 }

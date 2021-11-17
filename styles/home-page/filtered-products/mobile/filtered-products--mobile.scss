@@ -1,0 +1,121 @@
+.filter-bar--mobile {
+  display: flex;
+  padding: 20px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .filtered-bar--mobile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+
+    .filtered-category {
+      p {
+        font-family: PoppinsRegular, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #b80103;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: #b80103;
+          bottom: -6px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    // .filtered-category--dots {
+    //   display: flex;
+    //   padding-top: 14px;
+    //   gap: 4px;
+
+    //   .cat-dot {
+    //     background-color: #19832b;
+    //     width: 4px;
+    //     height: 4px;
+    //     border-radius: 50%;
+    //     cursor: pointer;
+
+    //     &.active {
+    //       background-color: red;
+    //     }
+    //   }
+    // }
+  }
+
+  .prev-image {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .next-image {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
+
+.filter-bar-mobile-content {
+  .card-content {
+    max-width: 280px;
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+    .box-container {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 7.5px;
+      box-shadow: 0 0.5px 3px 0 rgba(22, 140, 52, 0.15);
+
+      .box {
+        position: relative;
+        width: 90%;
+        height: 180px;
+      }
+    }
+
+    h1 {
+      text-align: center;
+      font-family: PoppinsRegular, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #a2c3aa;
+      padding: 20px 0;
+    }
+  }
+}
+
+@media (min-width: 690px) {
+  .filter-bar--mobile {
+    display: none;
+  }
+
+  .filter-bar-mobile-content {
+    display: none;
+  }
+}
