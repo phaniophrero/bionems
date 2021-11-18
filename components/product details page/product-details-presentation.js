@@ -23,7 +23,9 @@ const ProductDetailsPresentation = (props) => {
           <ul className="ingredients">
             {product.ingredients.map((ingr, index) => (
               <li key={index}>
-                <div className="image"></div>
+                <div className="image">
+                  <Image src='/assets/product-details/check.svg' alt='check' layout="fill" />
+                </div>
                 <p>{ingr.name}</p>
               </li>
             ))}
@@ -33,8 +35,9 @@ const ProductDetailsPresentation = (props) => {
 
       <div className="bottom">
         <div className="mini-comments">
-          <ProductDetailsReviewsComments commentsData={commentsData} />
-          {/* <div className="overlay"></div> */}
+          <div className="go-to-comments--btn">
+            Go to comments
+          </div>
         </div>
 
         <div className="description">

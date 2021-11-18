@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const DUMMY_SUBMENU = [
   {
@@ -25,11 +25,15 @@ const DUMMY_SUBMENU = [
 const NavbarSections = () => {
   const [scrollY, setScrollY] = useState(0);
   const [sectionInScroll, setSectionInScroll] = useState(DUMMY_SUBMENU[0].name);
+  const [mounted, setIsMounted] = useState(false)
 
-  typeof window === "object" &&
-  window.addEventListener("scroll", () => {
-    setScrollY(window.scrollY);
-  });
+  useEffect(() => {
+        setIsMounted(true)
+
+        return () => setIsMounted(false)
+  }, []);
+
+  mounted && window.addEventListener('scroll', () => setScrollY(window.scrollY))
 
   return (
     <section className={`navbar--sub-nav ${scrollY >= 100 && "active"}`}>

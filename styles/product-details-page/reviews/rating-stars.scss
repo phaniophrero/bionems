@@ -2,7 +2,7 @@
     display: inline-flex;
 
     .star-image {
-        background-color: white;
+        background-color: transparent;
         position: relative;
         width: 20px;
         height: 20px;
@@ -10,5 +10,18 @@
         justify-content: center;
         align-content: center;;
         cursor: pointer;
+        width: 27px;
+    }
+}
+
+.rating-result {
+    display: flex;
+    gap: 3px;
+    padding: 6px 0;
+
+    .image {
+        position: relative;
+        width: 14px;
+        height: 14px;
     }
 }

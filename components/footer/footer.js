@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
-import Map from "./map";
 import FooterMedia from "./footer-media";
 import FooterOrar from "./footer-orar";
 
@@ -12,7 +11,6 @@ function Footer() {
       <div className="footer__top">
         <FooterMedia />
         <FooterOrar />
-        <Map />
       </div>
 
       <nav className="footer__nav">

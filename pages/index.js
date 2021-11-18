@@ -9,12 +9,8 @@ import fs from 'fs/promises'
 import path from 'path'
 import NavbarSections from '../components/navbar/navbar-sections';
 
-// import { getAllCategories, getAllProducts } from "../helpers/api-util";
-import fs from "fs/promises";
-import path from "path";
-
 export default function Home(props) {
-  const { data, products, tourData } = props;
+  const { data, productsData, tourData } = props;
 
   return (
     <>
@@ -23,8 +19,8 @@ export default function Home(props) {
     <SliderHero />
       <HomeFilteredProducts data = { data } productsData = { productsData } />
 
-      <SliderHero />
-      <HomeFilteredProducts data={data} productsData={products} />
+      {/* <SliderHero />
+      <HomeFilteredProducts data={data} productsData={productsData} /> */}
 
 
       <StorySection />
@@ -35,35 +31,38 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  // const filePath = path.join(process.cwd(), 'data', 'products-categorys-data.json')
-  // const jsonData = await fs.readFile(filePath)
-  // const data = JSON.parse(jsonData)
-  const response = await fetch("http://127.0.0.1:8000/api/products/");
-  const allProducts = await response.json();
+  const filePath = path.join(process.cwd(), 'data', 'products-categorys-data.json')
+  const jsonData = await fs.readFile(filePath)
+  const data = JSON.parse(jsonData)
 
-  const responseCategory = await fetch("http://127.0.0.1:8000/api/categories/");
-  const allCategories = await responseCategory.json();
+  // const response = await fetch("http://127.0.0.1:8000/api/products/");
+  // const allProducts = await response.json();
+
+  // const responseCategory = await fetch("http://127.0.0.1:8000/api/categories/");
+  // const allCategories = await responseCategory.json();
 
   const tourPath = path.join(process.cwd(), "data", "tour-data.json");
   const tourJsonData = await fs.readFile(tourPath);
   const tourData = JSON.parse(tourJsonData);
 
-  if (!allProducts) {
-    return {
-      notFound: true,
-    };
-  }
+  // if (!allProducts) {
+  //   return {
+  //     notFound: true,
+  //   };
+  // }
 
-  if (!allCategories) {
-    return {
-      notFound: true,
-    };
-  }
+  // if (!allCategories) {
+  //   return {
+  //     notFound: true,
+  //   };
+  // }
+
+  console.log(data.products)
 
   return {
     props: {
-      data: allCategories,
-      products: allProducts,
+      data: data.productsCategorysData,
+      productsData: data.products,
       tourData: tourData.tourData,
     },
   };

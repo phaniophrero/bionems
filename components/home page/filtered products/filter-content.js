@@ -23,7 +23,7 @@ const FilterContent = (props) => {
 
               <ul className="ingredients">
                 {product.ingredients.map((ingredient, index) => (
-                  <li key={index}>{ingredient}</li>
+                  <li key={index}>{ingredient.name}</li>
                 ))}
               </ul>
 

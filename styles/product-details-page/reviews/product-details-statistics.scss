@@ -1,46 +1,65 @@
 .product-details-reviews-statistics {
   max-width: 700px;
-  width: 100%;
+  width: 90%;
   border-radius: 20px;
   box-shadow: 0 0px 10px rgb(211, 211, 211);
-  padding: 30px;
+  padding: 30px 0px;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 30% 70%;
   margin: 60px 0 20px;
+  background: white;
 
   .rating {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    h1 {
+      font-family: PoppinsRegular, sans-serif;
+      font-size: 25px;
+      font-weight: 600;
+      color: #457e54;
+    }
+
+    p {
+      font-family: PoppinsRegular, sans-serif;
+      font-weight: bold;
+      font-size: 10px;
+      font-weight: normal;
+      color: #457e54;
+      margin-top: 14px;
+      font-weight: bold;
+    }
   }
 
   .tabel {
-
     .line {
-      display: flex;
       padding: 14px 0;
       align-items: center;
       justify-content: center;
       gap: 10px;
+      display: grid;
+      grid-template-columns: 0.8fr 4fr 1fr 1fr;
 
       .fill-container {
         max-width: 300px;
         width: 100%;
         height: 10px;
         border-radius: 8px;
-        background-color: #f4f4f4;
+        background-color: #e0e0e0;
 
         .fill {
-            background-color: red;
-            width: 40%;
-            height: 100%;
-            border-radius: 8px;
+          background-color: red;
+          width: 40%;
+          height: 100%;
+          border-radius: 8px;
         }
       }
 
       p {
         font-family: PoppinsRegular, sans-serif;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: normal;
         color: #457e54;
       }
@@ -48,11 +67,23 @@
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 700px) {
   .product-details-reviews-statistics {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
     padding: 14px;
     width: 90%;
+
+    .tabel {
+      .line {
+        grid-template-columns: 4fr 1fr 1fr;
+
+        .fill-container {
+          grid-row: 2 / 3;
+          grid-column: 1 / -1;
+          max-width: 100%;
+        }
+      }
+    }
   }
 }
