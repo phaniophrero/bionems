@@ -6,7 +6,7 @@ const ProductDetailsReviewsForm = () => {
   return (
     <form className="product-details-reviews-form">
       <div className="rating-stars">
-        <p>Note Generale</p>
+        <label>Note Generale</label>
         <RatingStars />
       </div>
 

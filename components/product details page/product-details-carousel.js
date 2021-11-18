@@ -4,17 +4,34 @@ import Image from "next/image";
 
 const ProductDetailsCarousel = (props) => {
   const { allProducts } = props;
-  const [wWidth, setWWidth] = useState();
-  typeof window === "object" &&
-    window.addEventListener("resize", () => setWWidth(window.innerWidth));
+  const [isMounted, setIsMounted] = useState(false)
+  const [nrSlides, setNrSlides] = useState(3)
+    
+    isMounted && window.addEventListener("resize", () => {
+      if(window.innerWidth < 900) {
+        setNrSlides(1)
+      } else {
+        setNrSlides(3)
+      }
+    })    
 
+    console.log(nrSlides)
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
-    slidesToScroll: wWidth < 900 ? 1 : 3,
+    slidesToScroll: nrSlides,
     speed: 6,
   });
 
-  useEffect(() => {}, [emblaApi]);
+  useEffect(() => {
+    setIsMounted(true)
+    if(window.innerWidth < 900) {
+      setNrSlides(1)
+    } else {
+      setNrSlides(3)
+    }
+
+    return () => setIsMounted(false)
+  }, [])
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();

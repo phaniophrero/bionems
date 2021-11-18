@@ -1,8 +1,8 @@
 import React from 'react'
-import RatingStars from './rating-stars'
+import RatingResult from './rating-result'
 
 const ProductDetailsReviewsComments = (props) => {
-    const { commentsData } = props
+    const { commentsData, com } = props
 
     return (
         <div className='product-details-reviews-comments'>
@@ -10,7 +10,7 @@ const ProductDetailsReviewsComments = (props) => {
                 <div className="card" key = { index }>
                     <div className="name"><h1>{comments.username}</h1></div>
                     <div className="rating-date">
-                        <RatingStars />
+                        <RatingResult />
                         <p>{comments.date}</p>
                     </div>
                     <div className="title">

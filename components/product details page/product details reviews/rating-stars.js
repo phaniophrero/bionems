@@ -45,6 +45,7 @@ const RatingStars = () => {
           className="star-image"
           key={index}
           onMouseLeave={() => setTracking(0)}
+          onMouseEnter={() => setTracking(star.value)}
 
         >
           {star.value <= tracking || star.value <= value ? (
@@ -53,7 +54,6 @@ const RatingStars = () => {
             />
           ) : (
             <Image src='/assets/product-details/star-empty.svg' layout="fill"
-              onMouseEnter={() => setTracking(star.value)}
             />
           )}
         </div>
