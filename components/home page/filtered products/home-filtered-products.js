@@ -19,6 +19,8 @@ const HomeFilteredProducts = (props) => {
     (product) => product.category === myCategory
   );
 
+  console.log(filteredProducts)
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -26,8 +28,6 @@ const HomeFilteredProducts = (props) => {
       dispatch(getProductsCategoryAction("", 0));
     }
   }, []);
-
-  console.log(myCategory);
 
   return (
     <div className="home__filtered-products" id="produits">
@@ -39,22 +39,7 @@ const HomeFilteredProducts = (props) => {
       ) : (
         <FilterContent filteredProducts={filteredProducts} />
       )}
-
-  const filteredProducts = productsData.filter(
-    (product) => product.category === selectedCategory
-  );
-
-  return (
-    <div className="home__filtered-products">
-      <FilterBar
-        data={data}
-        selectedCategoryHandler={selectedCategoryHandler}
-        selectedCategory={selectedCategory}
-      />
-      <FilterContent filteredProducts={filteredProducts} />
-
     </div>
-  );
-};
+  )};
 
-export default HomeFilteredProducts;
+export default HomeFilteredProducts
