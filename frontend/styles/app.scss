@@ -1,0 +1,39 @@
+@import "./variables.scss";
+@import "./globals.scss";
+
+@import "./navbar/navbarCategories.scss";
+@import "./navbar/navbar.scss";
+@import "./navbar/navbar-mobile.scss";
+
+@import "./footer/footer.scss";
+
+@import "./slider/sliderHero.scss";
+
+@import "./sections/storySection.scss";
+@import "./sections/tourSection.scss";
+@import "./sections/newsletterSection.scss";
+
+// UI
+@import "./ui/loader.scss";
+
+// dashboard
+@import "./dashboard/navbarDashboard.scss";
+@import "./dashboard/dashboard.scss";
+
+//! kaniki
+
+@import "./home-page/filtered-products/filtered-products.scss";
+@import "./home-page/filtered-products/mobile/filtered-products--mobile.scss";
+
+@import "./product-details-page/product-details-page.scss";
+@import "./product-details-page/product-details-presentation.scss";
+@import "./product-details-page/product-details-carousel.scss";
+@import "./product-details-page/product-details-carousel.scss";
+@import "./product-details-page/reviews/product-details-reviews.scss";
+@import "./product-details-page/reviews/product-details-statistics.scss";
+@import "./product-details-page/reviews/product-details-comments.scss";
+@import "./product-details-page/reviews/rating-stars.scss";
+
+@import "./sign-up-page/sign-up-page.scss";
+
+@import "./sign-in-page/sign-in-page.scss";

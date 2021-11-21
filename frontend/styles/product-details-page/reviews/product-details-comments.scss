@@ -1,0 +1,68 @@
+.product-details-reviews-comments {
+  max-width: 752px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 100px 0;
+
+  .card {
+    max-width: 752px;
+    width: 100%;
+    background-color: lightsalmon;
+    padding: 20px;
+
+    border-radius: 1.5rem;
+    box-shadow: 0 0.5px 5px 0 rgba(24, 100, 37, 0.2);
+    background-color: #fff;
+
+    .name {
+      margin-bottom: 6px;
+
+      h1 {
+        font-family: PoppinsRegular, sans-serif;
+        font-size: 1.8rem;
+        color: #457e54;
+      }
+    }
+
+    .rating-date {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 15px;
+
+      p {
+        font-family: PoppinsRegular, sans-serif;
+        font-size: 1.2rem;
+        color: #457e54;
+      }
+    }
+
+    .title {
+      p {
+        font-family: PoppinsRegular, sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #696969;
+      }
+    }
+
+    .description {
+      padding: 20px 0;
+      p {
+        font-family: PoppinsRegular, sans-serif;
+        font-size: 1.6rem;
+        color: #696969;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .product-details-reviews-comments {
+    width: 90%;
+  }
+}
