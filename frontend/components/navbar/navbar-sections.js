@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 
 const DUMMY_SUBMENU = [
   {
@@ -25,36 +26,41 @@ const DUMMY_SUBMENU = [
 const NavbarSections = () => {
   const [scrollY, setScrollY] = useState(0);
   const [sectionInScroll, setSectionInScroll] = useState(DUMMY_SUBMENU[0].name);
-  const [mounted, setIsMounted] = useState(false)
+  const [mounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-        setIsMounted(true)
+    setIsMounted(true);
 
-        return () => setIsMounted(false)
+    return () => setIsMounted(false);
   }, []);
 
-  mounted && window.addEventListener('scroll', () => setScrollY(window.scrollY))
+  mounted &&
+    window.addEventListener("scroll", () => setScrollY(window.scrollY));
 
   return (
-    <section className={`navbar--sub-nav ${scrollY >= 100 && "active"}`}>
-      {DUMMY_SUBMENU.map((item, index) => (
-        <p
-          className={`sub-nav--p ${
-            sectionInScroll === item.name && scrollY >= 100
-              ? "dark-mode"
-              : sectionInScroll === item.name
-              ? "active"
-              : ""
-          }`}
-          key={index}
-          onClick={() => {
-            setSectionInScroll(item.name);
-          }}
-        >
-          {item.name.toUpperCase()}
-        </p>
-      ))}
-    </section>
+    <nav className={`navbar--sub-nav ${scrollY >= 100 && "active"}`}>
+      <ul className="navbar--sub-list">
+        {DUMMY_SUBMENU.map((item, index) => (
+          <li
+            className={`sub-nav--p ${
+              sectionInScroll === item.name && scrollY >= 100
+                ? "dark-mode"
+                : sectionInScroll === item.name
+                ? "active"
+                : ""
+            }`}
+            key={index}
+            onClick={() => {
+              setSectionInScroll(item.name);
+            }}
+          >
+            <Link to={item.name} smooth={true}>
+              {item.name.toUpperCase()}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 

@@ -27,7 +27,7 @@ const HomeFilteredProducts = (props) => {
   }, []);
 
   return (
-    <div className="home__filtered-products" id="produits">
+    <section name="produits" className="home__filtered-products" id="produits">
       <FilterBar data={data} />
       {myCategory && <FilterBarMobile data={data} />}
 
@@ -36,7 +36,7 @@ const HomeFilteredProducts = (props) => {
       ) : (
         <FilterContent filteredProducts={filteredProducts} />
       )}
-    </div>
+    </section>
   );
 };
 

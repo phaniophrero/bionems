@@ -42,7 +42,7 @@ function SliderHero({ options = { loop: false } }) {
   }, [emblaApi, setScrollSnaps, onSelect]);
 
   return (
-    <main className="hero-wrapper">
+    <main name="accueil" className="hero-wrapper">
       <div className="embla" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide, index) => (
@@ -60,7 +60,7 @@ function SliderHero({ options = { loop: false } }) {
 
                 <ul className="ingredients">
                   {slide.types.map((type, index) => (
-                    <li key = { index }>
+                    <li key={index}>
                       <div className="point" />
                       <p key={index}>{type.name}</p>
                     </li>

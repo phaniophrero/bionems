@@ -5,7 +5,7 @@ import Button from "../ui/button";
 
 function NewsletterSection() {
   return (
-    <section className="newsletterSection">
+    <section name="nous contacter" className="newsletterSection">
       <header className="newsletterSection__header">
         <div className="newsletterSection__titleWrapper">
           <div className="newsletterSection__headerIcon headerIcon__left">

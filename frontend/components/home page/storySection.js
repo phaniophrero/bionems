@@ -7,7 +7,7 @@ import Image from "next/image";
 
 function StorySection() {
   return (
-    <div className="story-section">
+    <section className="story-section" name="l'histoire">
       {/* //? LEFT */}
       <div className="story-left">
         <div className="left-image-container">
@@ -41,25 +41,27 @@ function StorySection() {
             malicieux de son père Jacques…
           </p>
           <p>
-            <span className="red">Son objectif</span> : mettre du swing, du twist et un brin de rock’n’roll
-            dans vos assiettes !
+            <span className="red">Son objectif</span> : mettre du swing, du
+            twist et un brin de rock’n’roll dans vos assiettes !
           </p>
           <p>
-            <span className="red">Bravo</span> à nos producteurs locaux pour leur respect et leur amour des
-            produits : La Ferme des Caillats (Royans-Vercors – Drôme), La viande
-            D’ici (Drôme), Les Iles Ferays (Tournon sur Rhône – Ardèche),
-            Jean-Luc Raillon (Saint-Vincent-la-Commanderie – Drôme), …
+            <span className="red">Bravo</span> à nos producteurs locaux pour
+            leur respect et leur amour des produits : La Ferme des Caillats
+            (Royans-Vercors – Drôme), La viande D’ici (Drôme), Les Iles Ferays
+            (Tournon sur Rhône – Ardèche), Jean-Luc Raillon
+            (Saint-Vincent-la-Commanderie – Drôme), …
           </p>
           <p>
-            <span className="green">Bravo</span> à nos producteurs locaux pour leur respect et leur amour des
-            produits : La Ferme des Caillats (Royans-Vercors – Drôme), La viande
-            D’ici (Drôme), Les Iles Ferays (Tournon sur Rhône – Ardèche),
-            Jean-Luc Raillon (Saint-Vincent-la-Commanderie – Drôme), …
+            <span className="green">Bravo</span> à nos producteurs locaux pour
+            leur respect et leur amour des produits : La Ferme des Caillats
+            (Royans-Vercors – Drôme), La viande D’ici (Drôme), Les Iles Ferays
+            (Tournon sur Rhône – Ardèche), Jean-Luc Raillon
+            (Saint-Vincent-la-Commanderie – Drôme), …
           </p>
           <p>
-            <span className="green">Standing ovation</span> aux artistes Cartoon Dave {'&'} Miranda Richmond
-            Mouillot qui ont croqué et peint le PicUp Truck avec passion et
-            talent !
+            <span className="green">Standing ovation</span> aux artistes Cartoon
+            Dave {"&"} Miranda Richmond Mouillot qui ont croqué et peint le
+            PicUp Truck avec passion et talent !
           </p>
         </div>
       </div>
@@ -76,7 +78,7 @@ function StorySection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -3,12 +3,12 @@ import poster from "../../public/images/poster.png";
 import owner from "../../public/images/owner2.png";
 
 function TourSection(props) {
-  const { tourData } = props
+  const { tourData } = props;
 
   return (
-    <section className="tour-section">
+    <section name="bionems truck" className="tour-section">
       {tourData.map((tour, index) => (
-        <div className="tour-wrapper" key = { index }>
+        <div className="tour-wrapper" key={index}>
           <div className="orar">
             <div className="title">
               <h1>{tour.title}</h1>
@@ -20,7 +20,7 @@ function TourSection(props) {
 
             <ul className="program">
               {tour.program.map((item, index) => (
-                <li key = { index }>
+                <li key={index}>
                   <h1>{item.date}</h1>
                   <h2>{item.city}</h2>
 
