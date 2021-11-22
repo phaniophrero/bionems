@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-(x1pg13ny4y6e6n91po&*uvysgd$5t!h15-qqgo!q%jq&_x%ay
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '46.101.46.40']
 
 
 # Application definition
@@ -84,7 +84,7 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
+    'http://localhost:3000', '46.101.46.40'
 ]
 
 MIDDLEWARE = [
@@ -185,12 +185,12 @@ MEDIA_URL = '/images/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
-    BASE_DIR / 'frontend/build/static',
+    # BASE_DIR / 'frontend/build/static',
 ]
 
 MEDIA_ROOT = BASE_DIR / 'static/images'
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
