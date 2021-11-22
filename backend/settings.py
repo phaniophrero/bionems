@@ -214,3 +214,8 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'phaniophrero@gmail.com'
 EMAIL_HOST_PASSWORD = 'Smarald168$'
 EMAIL_USE_TLS = True
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
