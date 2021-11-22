@@ -1,13 +1,13 @@
-import React, { useEffect, useCallback, useState } from "react";
+import { useEffect, useCallback, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Link from "next/link";
 import Image from "next/image";
+import { API_URL } from "../../config";
 
 const ProductDetailsCarousel = (props) => {
   const { allProducts } = props;
   const [isMounted, setIsMounted] = useState(false);
   const [nrSlides, setNrSlides] = useState(3);
-
-  const origin = "http://localhost:8000";
 
   isMounted &&
     window.addEventListener("resize", () => {
@@ -49,18 +49,22 @@ const ProductDetailsCarousel = (props) => {
       <div className="embla-details" ref={emblaRef}>
         <div className="embla__container-details">
           {allProducts.map((product, index) => (
-            <div className="embla__slide-details" key={index}>
-              <div className="image">
-                <Image
-                  src={origin + product.image}
-                  layout="fill"
-                  alt="product"
-                />
-              </div>
+            <Link href={product.slug} key={index}>
+              <a className="embla__slide-link">
+                <div className="embla__slide-details">
+                  <div className="image">
+                    <Image
+                      src={API_URL + product.image}
+                      layout="fill"
+                      alt="product"
+                    />
+                  </div>
 
-              <h1>{product.name}</h1>
-              <p>{product.price} e</p>
-            </div>
+                  <h1>{product.name}</h1>
+                  <p>{product.price} €</p>
+                </div>
+              </a>
+            </Link>
           ))}
         </div>
 

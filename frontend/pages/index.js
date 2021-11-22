@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import Head from "next/head";
+// import { useState, useEffect } from "react";
 import SliderHero from "../components/slider/sliderHero";
 import StorySection from "../components/home page/storySection";
 import TourSection from "../components/home page/tourSection";
@@ -9,12 +10,21 @@ import Layout from "../components/layout/layout";
 import fs from "fs/promises";
 import path from "path";
 import NavbarSections from "../components/navbar/navbar-sections";
+import { getAllCategories, getAllProducts } from "../helpers/api-util";
 
 export default function Home(props) {
   const { data, productsData, tourData } = props;
 
   return (
     <Layout>
+      <Head>
+        <title>Bionems</title>
+        <meta
+          name="description"
+          content="Bionems - Createur des nems bio avec la spécialité de la cuisinée Vietnamien en BIO Cuisine."
+        />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <NavbarSections />
       <SliderHero />
       <HomeFilteredProducts data={data} productsData={productsData} />
@@ -27,15 +37,11 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  // const filePath = path.join(process.cwd(), 'data', 'products-categorys-data.json')
-  // const jsonData = await fs.readFile(filePath)
-  // const data = JSON.parse(jsonData)
+  const allProducts = await getAllProducts();
+  // const allProducts = await response.json();
 
-  const response = await fetch("http://127.0.0.1:8000/api/products/");
-  const allProducts = await response.json();
-
-  const responseCategory = await fetch("http://127.0.0.1:8000/api/categories/");
-  const allCategories = await responseCategory.json();
+  const allCategories = await getAllCategories();
+  // const allCategories = await responseCategory.json();
 
   const tourPath = path.join(process.cwd(), "data", "tour-data.json");
   const tourJsonData = await fs.readFile(tourPath);

@@ -1,5 +1,5 @@
-import React from "react";
-import { useRouter } from "next/router";
+import Head from "next/head";
+// import { useRouter } from "next/router";
 import { getAllProducts } from "../helpers/api-util";
 import ProductDetails from "../components/product details page/product-details";
 import Layout from "../components/layout/layout";
@@ -9,6 +9,14 @@ const ProductDetailsPage = (props) => {
 
   return (
     <Layout>
+      <Head>
+        <title>Bionems - {product.name}</title>
+        <meta
+          name="description"
+          content={`Bionems - ${product.description}.`}
+        />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className="product-details-page">
         <ProductDetails product={product} allProducts={allProducts} />
       </div>

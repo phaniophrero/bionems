@@ -1,18 +1,17 @@
 import React from "react";
 import Image from "next/image";
 import ProductDetailsReviewsComments from "./product details reviews/product-details-reviews-comments";
+import { API_URL } from "../../config";
 
 const ProductDetailsPresentation = (props) => {
   const { product, commentsData } = props;
-
-  const origin = "http://localhost:8000";
 
   return (
     <div className="product-details--presentation">
       <div className="top">
         <div className="image-container">
           <div className="image">
-            <Image src={origin + product.image} alt="image" layout="fill" />
+            <Image src={API_URL + product.image} alt="image" layout="fill" />
           </div>
         </div>
 

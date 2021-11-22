@@ -225,7 +225,7 @@
         }
 
         &:nth-last-child(1) {
-          justify-self: end;
+          justify-self: flex-end;
           position: relative;
 
           .dashboard--table__btn {

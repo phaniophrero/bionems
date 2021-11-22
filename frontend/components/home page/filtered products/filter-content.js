@@ -1,11 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { API_URL } from "../../../config";
 
 const FilterContent = (props) => {
   const { filteredProducts } = props;
-
-  const origin = "http://localhost:8000";
 
   return (
     <div className="home__filtered-products--content">
@@ -16,7 +15,7 @@ const FilterContent = (props) => {
               <div className="image-container">
                 <div className="image">
                   <Image
-                    src={origin + product.image}
+                    src={API_URL + product.image}
                     alt="image"
                     layout="fill"
                   />
