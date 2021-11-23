@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-(x1pg13ny4y6e6n91po&*uvysgd$5t!h15-qqgo!q%jq&_x%ay
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '46.101.46.40','bionems.fr','www.bionems.fr', 'https://bionems-sgeq7.ondigitalocean.app']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '46.101.46.40','bionems.fr','www.bionems.fr']
 
 
 # Application definition
@@ -83,9 +83,9 @@ SIMPLE_JWT = {
     # 'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
-# CORS_ALLOWED_ORIGINS = [
-#     'http://localhost:3000', 'http://46.101.46.40'
-# ]
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000', 'https://bionems-frontend-phaniophrero.vercel.app/'
+]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -195,7 +195,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Default primary key field type
