@@ -5,3 +5,4 @@
 .env.production.local
 db.sqlite3
 /images
+/staticfiles
