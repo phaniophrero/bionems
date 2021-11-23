@@ -83,9 +83,9 @@ SIMPLE_JWT = {
     # 'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000', 'http://46.101.46.40'
-]
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:3000', 'http://46.101.46.40'
+# ]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -106,7 +106,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-             os.path.join(BASE_DIR, 'staticfiles/admin')
+            #  os.path.join(BASE_DIR, 'frontend/build')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -183,11 +183,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
-STATIC_URL_ADMIN = '/staticfiles/admin/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
-    BASE_DIR / 'admin',
     # BASE_DIR / 'frontend/build/static',
 ]
 
@@ -197,7 +195,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Default primary key field type
