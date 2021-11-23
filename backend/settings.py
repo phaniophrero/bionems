@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-(x1pg13ny4y6e6n91po&*uvysgd$5t!h15-qqgo!q%jq&_x%ay
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '46.101.46.40']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '46.101.46.40','bionems.fr','www.bionems.fr', 'https://bionems-sgeq7.ondigitalocean.app']
 
 
 # Application definition
