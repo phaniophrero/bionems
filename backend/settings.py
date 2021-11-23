@@ -183,10 +183,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
+STATIC_URL_ADMIN = '/admin/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
-    BASE_DIR / 'staticfiles',
+    BASE_DIR / 'admin',
     # BASE_DIR / 'frontend/build/static',
 ]
 
