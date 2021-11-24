@@ -8,6 +8,7 @@ import { getProductsCategoryAction } from "../../../redux/actions/getProductsCat
 
 const HomeFilteredProducts = (props) => {
   const { data, productsData } = props;
+  // console.log(data);
 
   const selectedProductsCategory = useSelector(
     (state) => state.selectedProductsCategory

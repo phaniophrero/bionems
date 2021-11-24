@@ -40,18 +40,15 @@ const ProductDetailsPresentation = (props) => {
 
       <div className="bottom">
         <div className="mini-comments">
-          <div className="comment">
+          {/* <div className="comment">
             <h3 className="comment-name">Jess Lock</h3>
             <ul className="comment-start"></ul>
-            <p className="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
-              dignissimos?
-            </p>
-          </div>
+            <p className="description">sadsajsad</p>
+          </div> */}
           <div className="go-to-comments--btn">Go to comments</div>
         </div>
 
-        <div className="description-right">
+        <div className="description">
           <div className="title">
             <h1>DESCRIPTION</h1>
             <div className="line" />

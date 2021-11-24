@@ -18,7 +18,7 @@ const ProductDetailsCarousel = (props) => {
       }
     });
 
-  // console.log(nrSlides)
+  console.log(nrSlides);
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
     slidesToScroll: nrSlides,
@@ -49,22 +49,18 @@ const ProductDetailsCarousel = (props) => {
       <div className="embla-details" ref={emblaRef}>
         <div className="embla__container-details">
           {allProducts.map((product, index) => (
-            <Link href={product.slug} key={index}>
-              <a className="embla__slide-link">
-                <div className="embla__slide-details">
-                  <div className="image">
-                    <Image
-                      src={API_URL + product.image}
-                      layout="fill"
-                      alt="product"
-                    />
-                  </div>
+            <div className="embla__slide-details" key={index}>
+              <div className="image">
+                <Image
+                  src={API_URL + product.image}
+                  layout="fill"
+                  alt="product"
+                />
+              </div>
 
-                  <h1>{product.name}</h1>
-                  <p>{product.price} €</p>
-                </div>
-              </a>
-            </Link>
+              <h1>{product.name}</h1>
+              <p>{product.price} e</p>
+            </div>
           ))}
         </div>
 

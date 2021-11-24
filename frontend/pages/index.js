@@ -15,6 +15,8 @@ import { getAllCategories, getAllProducts } from "../helpers/api-util";
 export default function Home(props) {
   const { data, productsData, tourData } = props;
 
+  // console.log(data);
+
   return (
     <Layout>
       <Head>

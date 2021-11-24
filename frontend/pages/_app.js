@@ -4,16 +4,17 @@ import { useStore } from "../redux/store";
 import { useRouter } from "next/router";
 import Footer from "../components/footer/footer";
 import Navbar from "../components/navbar/navbar";
-// import { wrapper } from "../redux/store";
+import { wrapper } from "../redux/store";
 import "../styles/app.scss";
 import { FbMessenger } from "../components/fb-messenger/fb-messenger";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const store = useStore(pageProps.initialReduxState);
+  // const store = useStore(pageProps.initialReduxState);
 
   return (
-    <Provider store={store}>
+    // <Provider store={store}>
+    <>
       {router.pathname === "/bionemsadmin" ||
       router.pathname === "/sign-in" ||
       router.pathname === "/sign-up" ? (
@@ -114,9 +115,10 @@ function MyApp({ Component, pageProps }) {
       ) : (
         <Footer />
       )}
-    </Provider>
+    </>
+    // </Provider>
   );
 }
 
-export default MyApp;
-// export default wrapper.withRedux(MyApp);
+// export default MyApp;
+export default wrapper.withRedux(MyApp);
