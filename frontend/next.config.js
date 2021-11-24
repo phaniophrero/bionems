@@ -10,7 +10,7 @@ module.exports = {
     key: "AIzaSyDZFoCzYRsoCJZBsyC6PGtR1j0cTky4ams",
   },
   images: {
-    domains: ["localhost"],
+    domains: ["localhost", "bionems.fr", "www.bionems.fr"],
   },
   eslint: {
     ignoreDuringBuilds: true,
